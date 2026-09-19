@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Report a crime against Dota 2 — submit evidence of feeding, intentional throwing, or questionable itemization to the International Court of Dota Crimes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-group">
+                <img src="images/dota-logo.png" alt="Dota 2 emblem" class="site-logo">
+                <div>
+                    <span class="site-title">DOTA 2 ARCHIVE</span>
+                    <span class="site-sub">The Unofficial History</span>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">The Legends</a>
+                <a href="contact.html" class="active">Report Crime</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="content-section">
+            <h1>Report a Crime Against the Ancient</h1>
+            <p>
+                Someone has committed a serious offense against the Ancient. The International Criminal Court
+                of Dota (ICCD) accepts all evidence submissions. No incident is too small. No throw is too obvious.
+                Justice will be served (eventually) (probably not).
+            </p>
+
+            <form action="#" method="post" class="archive-form">
+                <fieldset>
+                    <legend>Official Incident Report &mdash; ICCD Division</legend>
+
+                    <!-- Text input -->
+                    <div class="form-group">
+                        <label for="suspect-nick">Suspect Nickname *</label>
+                        <input type="text" id="suspect-nick" name="suspect_nick"
+                               placeholder="e.g. MidOrFeed_2013, NotASmurfISwear" maxlength="30" required>
+                    </div>
+
+                    <!-- Number: MMR -->
+                    <div class="form-group">
+                        <label for="mmr-bracket">Your MMR</label>
+                        <input type="number" id="mmr-bracket" name="mmr_bracket"
+                               min="0" max="15000" step="50" placeholder="3000 (be honest)">
+                    </div>
+
+                    <!-- Radio: Crime committed -->
+                    <div class="form-group">
+                        <span class="group-label">Crime Committed *</span>
+                        <div class="radio-group">
+                            <label for="crime-pudge">
+                                <input type="radio" id="crime-pudge" name="crime_type" value="pudge" checked>
+                                First-picked Pudge
+                            </label>
+                            <label for="crime-dagon">
+                                <input type="radio" id="crime-dagon" name="crime_type" value="dagon">
+                                Bought Dagon on support
+                            </label>
+                            <label for="crime-farm">
+                                <input type="radio" id="crime-farm" name="crime_type" value="farm">
+                                Farmed for 45 minutes
+                            </label>
+                            <label for="crime-wards">
+                                <input type="radio" id="crime-wards" name="crime_type" value="wards">
+                                No wards (entire game)
+                            </label>
+                            <label for="crime-322">
+                                <input type="radio" id="crime-322" name="crime_type" value="322">
+                                322 (suspected throw)
+                            </label>
+                            <label for="crime-highground">
+                                <input type="radio" id="crime-highground" name="crime_type" value="highground">
+                                Went highground
+                            </label>
+                            <label for="crime-other">
+                                <input type="radio" id="crime-other" name="crime_type" value="other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Radio: Role -->
+                    <div class="form-group">
+                        <span class="group-label">Suspect's Role</span>
+                        <div class="radio-group">
+                            <label for="role-carry">
+                                <input type="radio" id="role-carry" name="role" value="carry" checked>
+                                Carry
+                            </label>
+                            <label for="role-mid">
+                                <input type="radio" id="role-mid" name="role" value="mid">
+                                Mid
+                            </label>
+                            <label for="role-offlane">
+                                <input type="radio" id="role-offlane" name="role" value="offlane">
+                                Offlane
+                            </label>
+                            <label for="role-support">
+                                <input type="radio" id="role-support" name="role" value="support">
+                                Support
+                            </label>
+                            <label for="role-hard-support">
+                                <input type="radio" id="role-hard-support" name="role" value="hard_support">
+                                Hard Support
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Date: Date of incident -->
+                    <div class="form-group">
+                        <label for="incident-date">Date of Incident</label>
+                        <input type="date" id="incident-date" name="incident_date">
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-group">
+                        <label for="reporter-email">Your Contact Email (for court summons)</label>
+                        <input type="email" id="reporter-email" name="reporter_email"
+                               placeholder="survivor@ancients.gg">
+                    </div>
+
+                    <!-- Textarea -->
+                    <div class="form-group">
+                        <label for="incident-log">Describe the Crime *</label>
+                        <textarea id="incident-log" name="incident_log" rows="6"
+                                  placeholder="Describe what happened: what hero was picked, what items were purchased, at what minute they gave up, and how many times they typed 'gg'..." required></textarea>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="verify-oath" name="verify_oath" required>
+                        <label for="verify-oath">
+                            I confirm that this crime actually happened.
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">SUBMIT EVIDENCE &rarr;</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="case-submitted-notice">
+                <p><strong>CASE SUBMITTED.</strong></p>
+                <p>The International Court of Dota will review your case.</p>
+                <p><em>Estimated response time: 3&ndash;5 business patches.</em></p>
+            </div>
+        </section>
+
+        <!-- ===== RECENT CASES ===== -->
+        <section class="content-section">
+            <h2>Recent Cases &mdash; ICCD Docket</h2>
+            <p>The following cases have been submitted and are currently under review by the Court:</p>
+
+            <div class="case-grid">
+                <div class="case-card">
+                    <span class="case-id">CASE #2026-0847</span>
+                    <h3>Position 5 Lion &mdash; Dagon Purchase</h3>
+                    <p class="case-status">STATUS: <strong>GUILTY</strong></p>
+                    <p>Subject purchased Dagon 5 by minute 32 as a position 5 support. Zero Observer Wards were placed during the entire 48-minute game. When questioned, subject responded: "I'm doing damage."</p>
+                    <div class="case-verdict">Sentence: 5 games of Crystal Maiden with wards only.</div>
+                </div>
+
+                <div class="case-card">
+                    <span class="case-id">CASE #2026-0651</span>
+                    <h3>Anti-Mage &mdash; Refusal to Fight</h3>
+                    <p class="case-status">STATUS: <strong>UNDER REVIEW</strong></p>
+                    <p>Subject farmed jungle for 41 minutes while the team fought 4v5. When Ancient was at 10% HP, subject typed "I need one more item." The item was Butterfly. Subject already had Butterfly.</p>
+                    <div class="case-verdict">Sentence: Pending. Subject is still farming.</div>
+                </div>
+
+                <div class="case-card">
+                    <span class="case-id">CASE #2026-0422</span>
+                    <h3>Pudge Mid &mdash; 0/14/2 Scoreline</h3>
+                    <p class="case-status">STATUS: <strong>DISMISSED</strong></p>
+                    <p>Subject went 0/14/2 as Pudge mid. Missed every hook. When asked why, subject responded: "Lag." Investigation found subject had 23ms ping. Case dismissed due to insufficient evidence that subject was ever trying.</p>
+                    <div class="case-verdict">Sentence: None. The Court acknowledges Pudge is simply like this.</div>
+                </div>
+
+                <div class="case-card">
+                    <span class="case-id">CASE #2026-0199</span>
+                    <h3>Techies &mdash; Crimes Against Humanity</h3>
+                    <p class="case-status">STATUS: <strong>GUILTY (AGGRAVATED)</strong></p>
+                    <p>Subject picked Techies in a ranked match. Placed 847 mines. Game lasted 94 minutes. All 9 other players reported Techies. Techies won. This made it worse.</p>
+                    <div class="case-verdict">Sentence: Permanent assignment to 6-month low-priority queue.</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">The Legends</a>
+                <a href="contact.html">Report Crime</a>
+            </div>
+            <p>&copy; 2026 Dota 2: The Unofficial History &mdash; Assignment #1, Front-End Development</p>
+            <p class="footer-note"><em>No MMR was gained or restored during the creation of this website.</em></p>
+        </div>
+    </footer>
+
+</body>
+</html>
