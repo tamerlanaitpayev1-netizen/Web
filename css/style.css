@@ -3,7 +3,7 @@
    Units demonstrated: px, %, rem, em, vh.
 */
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#050505;--white:#f5f5f5;--red:#d71920;--line:#2a2a2a}
+:root{--black:#050505;--white:white;--red:rgb(215,25,32);--line:hsl(0 0% 16%)}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6}
 img,video{display:block;max-width:100%}
@@ -73,6 +73,10 @@ main{width:90%;max-width:1280px;margin:auto}
 .old-god-card h3{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,6vw,5rem);line-height:.9;text-transform:uppercase;margin:.8rem 0}
 .badge{display:inline-block;color:var(--white);border:1px solid var(--red);padding:.25rem .45rem;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 
+.archive-subject{max-width:850px;margin-top:1.5rem;padding:1rem 1.2rem;border-left:3px solid var(--red);background:#0a0a0a;color:#ccc}
+.facts-box{margin:2rem 0;border:1px solid var(--line);padding:1.5rem}
+.facts-box ul{padding-left:1.3rem;margin-top:1rem}
+.facts-box li{padding:.35rem 0;color:#ccc}
 .source-box{margin-top:1.5rem;padding:1rem;border-left:3px solid var(--red);background:#0a0a0a;font-size:.82rem;color:#bbb}
 .source-box a{text-decoration:underline}
 
